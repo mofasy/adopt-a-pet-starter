@@ -9,8 +9,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <Router>
-      <Navigation />
-      <HomePage />
+      <Routes>
+        <Route path="/navigation" element={<Navigation />} />
+        <Route path="/home/:type" element={<HomePage />} />
+      </Routes>
     </Router>
   );
 }

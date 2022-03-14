@@ -3,7 +3,7 @@ export const getPets = async (type = '', query = '') => {
   const requestUrl = `/animals?${searchParams.toString()}`;
 
   const response = await fetch(requestUrl, {
-    method: 'GET'
+    method: 'GET',
   });
 
   const json = await response.json();
@@ -14,7 +14,7 @@ export const getPets = async (type = '', query = '') => {
 export const getPetDetails = async (id) => {
   const requestUrl = `/animals/${id}`;
   const response = await fetch(requestUrl, {
-    method: 'GET'
+    method: 'GET',
   });
 
   const json = await response.json();
@@ -23,12 +23,11 @@ export const getPetDetails = async (id) => {
 };
 
 export const getPetTypes = async () => {
-  const requestUrl = `/types`;
+  const requestUrl = '/types';
   const response = await fetch(requestUrl, {
-    method: 'GET'
+    method: 'GET',
   });
 
   const json = await response.json();
-
   return json;
 };

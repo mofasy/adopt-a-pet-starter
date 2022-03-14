@@ -25,6 +25,11 @@
 
 .nav-link-active {
   background: #320059;
+  color: white;
+  text-decoration: none;
+  border-radius: 18;
+  padding: 6 24;
+  font-size: 18;
 }
 
 .pet-type-label {

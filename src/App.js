@@ -9,9 +9,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <Router>
+      <Navigation />
       <Routes>
-        <Route path="/navigation" element={<Navigation />} />
-        <Route path="/home/:type" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} >
+          <Route path="/pet-details-not-found" element={<PetDetailsNotFound />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path=":type" element={<HomePage />} >
+            <Route path=":id" element={<PetDetailsPage />} />
+          </Route>
+        </Route>
       </Routes>
     </Router>
   );
